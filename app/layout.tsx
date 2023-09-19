@@ -1,6 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
-
+import {Providers} from "./providers";
 
 
 
@@ -15,8 +15,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className="">{children}</body>
+    <html lang="en" className='dark'>
+      <body className="">
+        <Providers>
+          {children}
+        </Providers>
+      </body>
     </html>
   )
 }
